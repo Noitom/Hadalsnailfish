@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="../element/element.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css">
     <style>
         .el-row {
             margin-bottom: 20px;
@@ -31,18 +32,39 @@
             padding: 10px 0;
             background-color: #f9fafc;
         }
+        .v-enter{
+            opacity: 0;
+        }
+        .v-leave-to{
+            transform: translateX(150px);
+        }
+
+
+        .v-enter-active{
+            transition: opacity .5s;
+        }
+        .v-leave-active{
+            transition: transform .5s;
+        }
+
+        .v-enter-active,
+        .v-leave-active{
+            transition: all 1s ease;
+        }
     </style>
 </head>
 <body>
 <div id="app">
     
     <template>
-    <input type="checkbox" v-model="toggle" v-bind:true-value="true" v-bind:false-value="false">
-    <span>{{toggle}}</span>
-    <input type="radio" v-model="radio" v-bind:value="true">
-    <span>{{radio}}</span>
-    <input type="text" v-model.trim="message">
-        <span>{{message}}</span>
+        <div id="demo">
+            <button v-on:click="show = !show">
+                toggle
+            </button>
+            <transition name="custom0classes-transition" enter-active-class="animated tada" leave-active-class="animated bounceOutRight">
+                <p v-if="show">测试数据</p>
+            </transition>
+        </div>
     </template>
 </div>
 
@@ -63,7 +85,8 @@
             ],
             message:'公司简介：XXXXXXXXXXXXX',
             toggle : 'ture',
-            radio:''
+            radio:'',
+            show:true
 
         },
         methods: {
