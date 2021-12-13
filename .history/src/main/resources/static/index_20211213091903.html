@@ -61,22 +61,18 @@
         <div class="header-content container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/szy1.png" width="100" height="110" alt="">
+                    <img src="" width="144" height="72" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <el-menu class="el-menu-demo" mode="horizontal" text-color="#2b2b2b" default-active="1" active-text-color="rgb(91, 146, 251)">
-                        <el-menu-item index="1"> <a href="index.html">首页</a> </el-menu-item>
-                        <!-- <el-submenu index="2"> -->
-                            <el-menu-item index="2" > <a href="html/product.html">所有产品</a> </el-menu-item>
-                            <el-menu-item index="3" > <a href="html/help.html">技术支持</a> </el-menu-item>
-                            <el-menu-item index="4" > <a href="#">合作伙伴</a> </el-menu-item>
-                            <el-menu-item index="5"><a href="html/connect.html">联系我们</a></el-menu-item>
-                        </el-menu>
-                            <!-- <el-menu-item index="2-1"> <a href="html/product.html">所有产品</a> </el-menu-item> -->
-                            <!-- <el-submenu index="2-2">
+                    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#2b2b2b" default-active="1" active-text-color="rgb(91, 146, 251)">
+                        <el-menu-item index="1">首页</el-menu-item>
+                        <el-submenu index="2">
+                            <template slot="title" default-active="1">产品</template>
+                            <el-menu-item index="2-1"> <a href="html/product.html" target="_blank">所有产品</a> </el-menu-item>
+                            <el-submenu index="2-2">
                                 <template slot="title">应用分类</template>
                                 <el-menu-item index="2-2-1">生物于微生物</el-menu-item>
                                 <el-menu-item index="2-2-2">地球物理与资源</el-menu-item>
@@ -101,15 +97,18 @@
                             <el-submenu index="2-5">
                                 <template slot="title">应用视频</template>
                                 <el-menu-item index="2-5-1">典型应用影片展示与介绍</el-menu-item>
-                                <el-menu-item index="2-5-2">选项2</el-menu-item>
+                                <!-- <el-menu-item index="2-5-2">选项2</el-menu-item>
                                 <el-menu-item index="2-5-3">选项3</el-menu-item> -->
-                            <!-- </el-submenu>
+                            </el-submenu>
                         </el-submenu>
-                        <el-submenu index="3"> -->
-                            <!-- <el-menu-item index="3-1"><a href="html/help.html">技术指导</a></el-menu-item>
-                            <el-menu-item index="3-2">售后服务</el-menu-item> -->
-                        <!-- </el-submenu> -->
-                  
+                        <el-submenu index="3">
+                            <template slot="title">技术支持</template>
+                            <el-menu-item index="3-1"><a href="html/help.html" target="_blank">技术指导</a></el-menu-item>
+                            <el-menu-item index="3-2">售后服务</el-menu-item>
+                        </el-submenu>
+                        <el-menu-item index="4" >合作伙伴</el-menu-item>
+                        <el-menu-item index="5"><a href="html/connect.html" target="_blank">联系我们</a></el-menu-item>
+                    </el-menu>
                 </div>
             </nav>
         </div>

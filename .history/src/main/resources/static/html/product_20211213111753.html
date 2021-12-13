@@ -44,7 +44,12 @@
             padding: 10px 0;
             background-color: #f9fafc;
         }
-
+        .szy-product-div{
+            height: 220px;
+            width: 180px;
+            margin-right: 25px;
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body>
@@ -54,13 +59,13 @@
         <div class="header-content container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="product.html">
-                    <img src="../img/szy1.png" width="100" height="110" alt="">
+                    <img src="../img/szy1.png" width="50" height="60" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <el-menu  class="el-menu-demo" mode="horizontal"  text-color="#2b2b2b" default-active="3" active-text-color="rgb(91, 146, 251)">
+                    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#2b2b2b" default-active="2" active-text-color="rgb(91, 146, 251)">
                         <el-menu-item index="1"> <a href="../index.html">首页</a> </el-menu-item>
                         <!-- <el-submenu index="2"> -->
                             <el-menu-item index="2" > <a href="product.html">所有产品</a> </el-menu-item>
@@ -106,7 +111,6 @@
             </nav>
         </div>
     </div>
-    </div>
 <!--顶部导航end-->
     <!--轮播图-->
     <div class="" >
@@ -121,80 +125,115 @@
         </template>
     </div>
     <!--首页其他内容展示-->
-     <div class="container" style="background:#fff;margin-top: 20px">
-         <div class="row" style="">
-             <div class="col-md-3" >
-                 <template>
-                     <el-col :span="23">
-                         <div style="margin-top: 10px;margin-bottom: 10px;border-bottom: 2px solid #076ce0">
-                             <h5>
-                                 <span style="background:#076ce0;padding: 9px;font-family: 微软雅黑; font-size: 22px; color: rgb(255, 255, 255);margin-bottom: 0">产品分类</span>
-                             </h5>
-                         </div>
-                         <el-menu
-                                 default-active="2"
-                                 class="el-menu-vertical-demo"
-                                 <!-- @open="handleOpen" -->
-                                 @close="handleClose">
-                             <el-submenu index="1">
-                                 <template slot="title">
-                                     <i class="el-icon-location"></i>
-                                     <span>导航一</span>
-                                 </template>
-                                 <el-menu-item-group>
-                                     <template slot="title">分组一</template>
-                                     <el-menu-item index="1-1">选项1</el-menu-item>
-                                     <el-menu-item index="1-2">选项2</el-menu-item>
-                                 </el-menu-item-group>
-                                 <el-menu-item-group title="分组2">
-                                     <el-menu-item index="1-3">选项3</el-menu-item>
-                                 </el-menu-item-group>
-                                 <el-submenu index="1-4">
-                                     <template slot="title">选项4</template>
-                                     <el-menu-item index="1-4-1">选项1</el-menu-item>
-                                 </el-submenu>
-                             </el-submenu>
-                             <el-menu-item index="2">
-                                 <i class="el-icon-menu"></i>
-                                 <span slot="title">导航二</span>
-                             </el-menu-item>
-                             <el-menu-item index="3" disabled>
-                                 <i class="el-icon-document"></i>
-                                 <span slot="title">导航三</span>
-                             </el-menu-item>
-                             <el-menu-item index="4">
-                                 <i class="el-icon-setting"></i>
-                                 <span slot="title">导航四</span>
-                             </el-menu-item>
-                         </el-menu>
-                     </el-col>
-                 </template>
-             </div>
-             <div class="col-md-9" style=";">
-                 <div class="d-flex flex-column" style="margin-top: 50px">
-                     <el-collapse activeName="1" >
-                         <el-collapse-item title="一致性 Consistency" name="1">
-                             <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-                             <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
-                         </el-collapse-item>
-                         <el-collapse-item title="反馈 Feedback" name="2">
-                             <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-                             <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
-                         </el-collapse-item>
-                         <el-collapse-item title="效率 Efficiency" name="3">
-                             <div>简化流程：设计简洁直观的操作流程；</div>
-                             <div>清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；</div>
-                             <div>帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。</div>
-                         </el-collapse-item>
-                         <el-collapse-item title="可控 Controllability" name="4">
-                             <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</div>
-                             <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
-                         </el-collapse-item>
-                     </el-collapse>
-                 </div>
-             </div>
-         </div>
-     </div>
+
+    <div class="container" style="background:#fff;margin-top: 20px">
+        <div class="row" style="">
+            <div class="col-md-3" >
+                <template>
+                <el-col :span="23">
+                    <div style="margin-top: 10px;margin-bottom: 10px;border-bottom: 2px solid #076ce0">
+                        <h5>
+                            <span style="background:#076ce0;padding: 9px;font-family: 微软雅黑; font-size: 22px; color: rgb(255, 255, 255);margin-bottom: 0">产品分类</span>
+                        </h5>
+                    </div>
+                    <el-menu
+                            default-active="2"
+                            class="el-menu-vertical-demo"
+                            @open="handleOpen"
+                            @close="handleClose">
+                        <el-submenu index="1">
+                            <template slot="title">
+                                <i class="el-icon-location"></i>
+                                <span>导航一</span>
+                            </template>
+                            <el-menu-item-group>
+                                <template slot="title">分组一</template>
+                                <el-menu-item index="1-1">选项1</el-menu-item>
+                                <el-menu-item index="1-2">选项2</el-menu-item>
+                            </el-menu-item-group>
+                            <el-menu-item-group title="分组2">
+                                <el-menu-item index="1-3">选项3</el-menu-item>
+                            </el-menu-item-group>
+                            <el-submenu index="1-4">
+                                <template slot="title">选项4</template>
+                                <el-menu-item index="1-4-1">选项1</el-menu-item>
+                            </el-submenu>
+                        </el-submenu>
+                        <el-menu-item index="2">
+                            <i class="el-icon-menu"></i>
+                            <span slot="title">导航二</span>
+                        </el-menu-item>
+                        <el-menu-item index="3" disabled>
+                            <i class="el-icon-document"></i>
+                            <span slot="title">导航三</span>
+                        </el-menu-item>
+                        <el-menu-item index="4">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">导航四</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-col>
+                </template>
+            </div>
+            <div class="col-md-9" style=";">
+                <div class="d-flex flex-column">
+                    <div style="height: 50px ;">
+                        <div style="margin-top: 10px;margin-bottom: 10px;border-bottom: 2px solid #076ce0">
+                            <h5>
+                                <span style="background:#076ce0;padding: 9px;font-family: 微软雅黑; font-size: 22px; color: rgb(255, 255, 255);margin-bottom: 0">产品展示</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div >
+                            <div class="d-flex flex-row justify-content-start flex-wrap" style="padding-top: 5px">
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-between szy-product-div" >
+                                    <img src="../img/AD0IhdDxBBACGAAg0bCfvgUoysid8gUwoAI4xgI.jpg.webp" style="height: 180px;width: 180px">
+                                    <h6>产品1</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container-fluid cl-footer">
         <div class="container">
