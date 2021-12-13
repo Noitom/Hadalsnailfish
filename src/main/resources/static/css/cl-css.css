@@ -2,9 +2,7 @@
 body{
     background-color: #f4f4f4;
 }
-.cl-cantainer{
-    min-height: 80vh;
-}
+
 a{
     display: block;
     color:#333;
@@ -25,18 +23,7 @@ a:hover{
 .header-content{
     position: relative;
 }
-.cl-logo{
-    position: absolute;
-    left:0;
-    top:0;
-    height: 80px;
-    width: 300px;
-    overflow: hidden;
-}
-.cl-logo img{
-    max-width: 100%;
-    max-height: 100%;
-}
+
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1rem;
@@ -73,163 +60,6 @@ a:hover{
 }
 
 
-/*left*/
-.cl-left{
-    margin:20px 0;
-    padding:0;
-}
-.recommend-top{
-    margin-bottom:20px;
-}
-
-.recommend-bottom{
-    display: flex;
-    justify-content: space-between;
-}
-.recommend-item{
-    width: 49%;
-    /*height: 170px;*/
-    overflow: hidden;
-}
-
-.cl-artical-content,.recommend-panel,.comment{
-    background-color: #fff;
-    padding:0 20px 20px 20px;
-}
-
-/*card*/
-.cl-card{
-    background-color: #fff;
-    padding:1rem 1rem 0 1rem;
-    margin:0 0 20px 0;
-}
-
-.cl-card .cl-card-image{
-    border:1px solid #eaeaea;
-    overflow: hidden;
-    height: 150px;
-    padding:0;
-}
-
-.cl-card .cl-card-image img{
-    width: 100%;
-    max-width: 100%;
-}
-.cl-card .cl-card-more a{
-    color:#FF9400;
-}
-.cl-card-main-title a:hover,.cl-card .cl-card-more a:hover{
-    border-bottom:2px solid #FF9400;
-    padding-bottom:2px;
-}
-.cl-card-main-title{
-    height: 2rem;
-    overflow: hidden;
-
-}
-.cl-card-main-title a{
-    font-size:1.4rem;
-    color:#333;
-    font-weight: normal;
-}
-.cl-card-main-title a:hover{
-    text-decoration: underline;
-}
-.cl-card-main-info{
-    font-size:1rem;
-    color:#999;
-    height: 3rem;
-    overflow: hidden;
-    margin:0.5rem 0 2rem 0;
-}
-/*page*/
-.pagination .page-item.active .page-link{
-    background-color:#FF9400;
-    border-color:#FF9400;
-    color:#fff;
-}
-.pagination .page-item .page-link{
-    color:#666;
-}
-.pagination{
-    margin:20px 0 0 0;
-}
-.pagination li.disabled .page-link{
-    background-color: #eee;
-    color:#999;
-}
-.pagination li.disabled{
-    cursor: not-allowed;
-}
-/*right*/
-.cl-right{
-    margin:20px 0;
-}
-.right-card-main{
-    background-color: #fff;
-    margin:0 0 20px 0;
-}
-.cl-code{
-    width: 80%;
-    margin:10px auto;
-    padding:0 0 10px 0;
-}
-.right-card-title{
-    font-size:1.2rem;
-    color:#666;
-    font-weight: bold;
-    padding:20px 0 10px 10px;
-}
-.cl-code p{
-    color:#999;
-    line-height: 1.2rem;
-    margin-top:10px;
-    text-align: center;
-}
-/*right-recommended*/
-.right-recommended{
-    padding:10px;
-    height: 120px;
-    overflow: hidden;
-}
-.right-recommended-list{
-    list-style: none;
-    padding:0 10px 20px 10px;
-    box-sizing: border-box;
-}
-.right-recommended-list i{
-    color:#999;
-    margin-right:4px;
-}
-.right-recommended-list li{
-    width: 100%;
-    border-bottom:1px dashed #eaeaea;
-    color:#666;
-    height: 40px;
-    line-height:40px;
-    overflow: hidden;
-}
-/*label*/
-.label{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding:10px;
-
-}
-.label li a{
-    display: block;
-    border:1px solid #dbdbdb;
-    padding:2px 10px;
-    margin:0 8px 8px 0;
-    color:#666;
-}
-.label li a:hover{
-    background-color: #FF9400;
-    border-color:#FF9400;
-    color:#fff;
-}
-
 
 /*footer*/
 .cl-footer{
@@ -239,7 +69,7 @@ a:hover{
     margin:1rem 0 0 0;
     border-top:1px solid #f1f1f1;
     /*margin-left: 10px;*/
-    
+
 }
 .cl-footer-link a{
     font-size:20px;
@@ -254,131 +84,6 @@ a:hover{
    
 }
 
-/*artical*/
-.cl-artical-title{
-    padding:20px 0 10px 0;
-}
-.cl-card-tag{
-    color:#999;
-    font-size:1rem;
-}
-.cl-artical h1,.cl-artical h2,.cl-artical h3,.cl-artical h4,.cl-artical h5{
-    padding:1.5rem 0 0.5rem 0;
-}
-.cl-artical h1{
-    font-size:2rem;
-}
-.cl-artical h2{
-    font-size:1.75rem;
-}
-.cl-artical h3{
-    font-size:1.5rem;
-}
-.cl-artical h4{
-    font-size:1.25rem;
-}
-.cl-artical h5{
-    font-size:1rem;
-}
-.cl-artical{
-    padding:2.5rem 0 0 0;
-    color:#666;
-}
-.cl-artical blockquote{
-    font-size:18px;
-    padding:2rem 1rem 2rem 2rem;
-    border-left:4px solid #3F6600;
-    background-color: #f3f3f3;
-    /*font-style: italic;*/
-    font-weight: bold;
-    line-height: 1.8em;
-}
-.cl-artical blockquote:before{
-    content: " “ ";
-    font-size:60px;
-    vertical-align: bottom;
-    color:#3F6600;
-}
-
-.cl-artical blockquote span{
-    font-size:36px
-}
-
-.cl-artical p img{
-    vertical-align: middle;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-.cl-artical p{
-    padding:0.5rem 0 0.5rem 0;
-    line-height: 1.8rem;
-    font-size:18px;
-}
-.cl-content-info{
-    color:#999;
-}
-/*comment panel*/
-.comment-panel{
-    padding-bottom:0.5rem;
-    margin-top:2rem;
-    border-bottom:1px solid #dee2e6;
-    position: relative;
-}
-.comment-secondary-panel{
-    padding-bottom:0.5rem;
-    margin-top:1rem;
-    padding-top:1rem;
-    background-color: #f4f4f4;
-    position: relative;
-}
-.triangle-icon{
-    position: absolute;
-    left:50px;
-    top:-30px;
-    color:#f4f4f4;
-    font-size:60px;
-
-}
-.comment-panel .comment-panel-portrait{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.comment-panel-portrait img{
-    width: 60px;
-    height: 60px;
-}
-.comment-panel .comment-panel-content{
-    padding:0 0 0 70px;
-    width: 100%;
-}
-.comment-panel .comment-secondary-panel .comment-panel-content{
-    padding:0 0 10px 20px;
-    width: 100%;
-}
-.comment-panel-content-item div{
-    display: inline;
-    padding:0 0.5rem 0 0;
-    font-size:14px;
-    color:#999;
-}
-.comment-panel-content-item .comment-author{
-    font-size:16px;
-    color:#333;
-    font-weight: bold;
-}
-.comment-panel .comment-panel-content .comment-panel-content-main{
-    margin-top:0.5rem;
-    color:#666;
-}
-.comment-panel .comment-panel-secondary{
-    border:1px solid #e5e5e5;
-    padding:0.5rem 0.5rem 0 0.5rem;
-    margin:0.5rem 0;
-    background-color: #fffffb;
-}
 .text-primary{
     text-align: right;
 }
@@ -392,40 +97,6 @@ a:hover{
     }
 }
 
-/*comment form*/
-.cl-comment-from{
-    padding:20px 0 0 0;
-    margin:20px 0;
-}
-.cl-comment-from div{
-    height: 3rem;
-    border:1px solid #dfdfdf;
-}
-
-.cl-comment-from button{
-    float: right;
-    border:none;
-    background-color: #FF9400;
-    color:#fff;
-    font-size:16px;
-    padding:0.5rem 1rem;
-    cursor: pointer;
-    margin-top:10px;
-}
-.cl-comment-from button:hover{
-    background-color:#f38d00 ;
-}
-.cl-comment-from>div>textarea{
-    border:none;
-    width: 100%;
-    height: 100%;
-    line-height: 3rem;
-    padding:0 1rem;
-    box-sizing: border-box;
-}
-.cl-comment-from>div>textarea:focus,.cl-comment-from button:focus{
-    outline: none;
-}
 /*recommend aritical*/
 .recommend-panel{
     margin:20px 0;
@@ -613,4 +284,33 @@ a:hover{
     height: 280px;
 }
 
+/*字体*/
+.szy-yahei{
+    font-family: 微软雅黑;
+}
 
+.szy-yahei-22px-blue{
+    font-family: 微软雅黑;
+    font-size: 22px;
+    color: rgb(91, 146, 251);
+    margin-bottom: 0
+}
+
+.szy-yahei-18px-white{
+    font-family: 微软雅黑;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-bottom: 0
+}
+
+.szy-yahei-16px-white{
+    font-family: 微软雅黑;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-bottom: 0
+}
+
+.szy-index-img{
+    height: 250px;
+    width: 250px
+}
