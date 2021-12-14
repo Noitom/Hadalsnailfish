@@ -110,7 +110,7 @@
                                 <el-menu-item index="2-4-2">深海工程</el-menu-item>
                             </el-submenu>
                             <el-submenu index="2-5">
-                                <template slot="title">应用视频</template> 
+                                <template slot="title">应用视频</template>
                                 <el-menu-item index="2-5-1">典型应用影片展示与介绍</el-menu-item>
                                 <el-menu-item index="2-5-2">选项2</el-menu-item>
                                 <el-menu-item index="2-5-3">选项3</el-menu-item> -->
@@ -131,7 +131,7 @@
     <div class="container" style="width: 100%;overflow-x: hidden">
         <template>
             <div class="block" >
-                <el-carousel height="600px">
+                <el-carousel height="720px">
                     <el-carousel-item v-for="item in imageList" :key="item">
                         <img :src="item" style="height:720px;">
                     </el-carousel-item>
@@ -142,12 +142,7 @@
     <!--首页其他内容展示-->
 
     <div class="jumbotron-one">
-        <div class="szy-tow" ref="part1" v-show="part1flag">
-            <p>海南狮子鱼深海设计有限公司</p>
-            <span>文本文本文本文本文本文本文本文本文本文本文本文本文本文本</span>
-        </div>
-        <div class="szy-tow-one"></div>
-        <!-- <transition enter-active-class="animated bounceInRight">
+        <transition enter-active-class="animated bounceInRight">
             <div class="container-tow" style="background: url(img/border.webp);" ref="part1" v-show="part1flag">
                 <span class="word">关于我们:</span>
                 <div class="word-1">
@@ -164,7 +159,7 @@
                     </a>
                 </div>
             </div>
-        </transition> -->
+        </transition>
     </div>
 
 

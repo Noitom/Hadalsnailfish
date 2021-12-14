@@ -163,7 +163,12 @@ a:hover{
     left: 50%;
     top: 5%;
     background: url(cssimg/szy1.png) no-repeat;
+    Alpha(Opacity=25, FinishOpacity=50, Style=1, StartX=0, StartY=1, FinishX=200, FinishY=100)
 }
+/* .szy-tow-one span {
+    height: 400px;
+    background: url(cssimg/szy1.png) no-repeat;
+} */
 /* .container-tow{
     width:1200px;
     height: 291px;

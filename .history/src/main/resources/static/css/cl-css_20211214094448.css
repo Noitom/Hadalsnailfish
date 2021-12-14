@@ -156,12 +156,9 @@ a:hover{
     font-size: 13px;
     font-family: 微软雅黑;
 }
-.szy-tow-one {
+.szy-image {
     height: 600px;
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 5%;
+    width: 300px;
     background: url(cssimg/szy1.png) no-repeat;
 }
 /* .container-tow{
@@ -191,8 +188,8 @@ a:hover{
     top: 30%;
     /* transform: translate(-50%)
     translatey(-50%); */
-/* } */
-/* .word-i span{
+}
+.word-i span{
     font-size: 16px;
     font-family: 微软雅黑;
     color: black;
@@ -264,7 +261,7 @@ a:hover{
     top: 70%;
     transform: translate(-50%)
     translatey(-50%);
-} */ */
+} */
 /* 产品介绍界面*/
 .jumbotron-i{
     height: 670px;

@@ -158,10 +158,12 @@ a:hover{
 }
 .szy-tow-one {
     height: 600px;
-    width: 500px;
-    position: absolute;
+    width: 300px;
+    background-color: pink;
     left: 50%;
-    top: 5%;
+    top: 50%;
+}
+.szy-image {
     background: url(cssimg/szy1.png) no-repeat;
 }
 /* .container-tow{

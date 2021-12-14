@@ -164,6 +164,14 @@ a:hover{
     top: 5%;
     background: url(cssimg/szy1.png) no-repeat;
 }
+.con {
+    height: 400px;
+    width: 400px;
+}
+/* .szy-tow-one span {
+    height: 400px;
+    background: url(cssimg/szy1.png) no-repeat;
+} */
 /* .container-tow{
     width:1200px;
     height: 291px;

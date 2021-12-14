@@ -157,11 +157,14 @@ a:hover{
     font-family: 微软雅黑;
 }
 .szy-tow-one {
-    height: 600px;
+    height: 500px;
     width: 500px;
+    background-color: pink;
     position: absolute;
     left: 50%;
     top: 5%;
+}
+.szy-image {
     background: url(cssimg/szy1.png) no-repeat;
 }
 /* .container-tow{
