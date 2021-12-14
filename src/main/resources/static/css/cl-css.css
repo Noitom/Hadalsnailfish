@@ -314,3 +314,7 @@ a:hover{
     height: 250px;
     width: 250px
 }
+
+.szy-end-padding{
+    padding: 5px;
+}
