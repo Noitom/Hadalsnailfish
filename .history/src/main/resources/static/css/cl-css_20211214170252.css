@@ -131,41 +131,34 @@ a:hover{
     -o-transform: scale(1.1, 1.1);
     -moz-transform: scale(1.1, 1.1);
 }
-第二模块 */
+/* 第二模块 */
 .jumbotron-one{
     height: 650px;
     position: relative;
 }
 .szy-tow {
     height: 600px;
-    /* position: absolute;
+    position: absolute;
     left: 30%;
     top: 50%;
     transform: translate(-50%)
-    translatey(-50%) */
+    translatey(-50%)
 
- }
- .szy-tow-1{
-    margin-right: 100px;
-    margin-top: 50px
- }
-.szy-tow-1 p{
+}
+.szy-tow p{
     font-size: 20px;
     font-family: 微软雅黑;
 }
-.szy-tow-1 span {
+.szy-tow span {
     font-size: 13px;
     font-family: 微软雅黑;
-} 
-.szy-tow-2 {
-    width: 40%;
-    height: 500px;
-    margin-left: 50px;
-    /* position: absolute;
+}
+.szy-tow-one {
+    height: 600px;
+    position: absolute;
     left: 50%;
-    top: 5%; */
-    background: url(cssimg/szy1.png) no-repeat content-box ;
-    background-size: auto 300px;
+    top: 5%;
+    background: url(cssimg/szy1.png) no-repeat;
 }
 /* .container-tow{
     width:1200px;

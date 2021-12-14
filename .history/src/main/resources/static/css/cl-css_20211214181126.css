@@ -158,14 +158,13 @@ a:hover{
     font-family: 微软雅黑;
 } 
 .szy-tow-2 {
-    width: 40%;
+    width: 30%;
     height: 500px;
     margin-left: 50px;
     /* position: absolute;
     left: 50%;
     top: 5%; */
     background: url(cssimg/szy1.png) no-repeat content-box ;
-    background-size: auto 300px;
 }
 /* .container-tow{
     width:1200px;
