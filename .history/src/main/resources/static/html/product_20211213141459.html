@@ -55,7 +55,7 @@
 <body>
 <div id="app" style="background:#fff;">
 <!--顶部导航start-->
-    <!-- <div class="cl-header container-fluid">
+    <div class="cl-header container-fluid">
         <div class="header-content container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="product.html">
@@ -67,12 +67,12 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <el-menu  class="el-menu-demo" mode="horizontal"  text-color="#2b2b2b" default-active="2" active-text-color="rgb(91, 146, 251)">
                         <el-menu-item index="1"> <a href="../index.html">首页</a> </el-menu-item>
-                        <el-submenu index="2"> -->
-                            <!-- <el-menu-item index="2" > <a href="product.html">所有产品</a> </el-menu-item>
+                        <!-- <el-submenu index="2"> -->
+                            <el-menu-item index="2" > <a href="product.html">所有产品</a> </el-menu-item>
                             <el-menu-item index="3" > <a href="help.html">技术支持</a> </el-menu-item>
                             <el-menu-item index="4" > <a href="#">合作伙伴</a> </el-menu-item>
                             <el-menu-item index="5"><a href="connect.html">联系我们</a></el-menu-item>
-                        </el-menu> -->
+                        </el-menu>
                             <!-- <el-menu-item index="2-1"> <a href="html/product.html">所有产品</a> </el-menu-item> -->
                             <!-- <el-submenu index="2-2">
                                 <template slot="title">应用分类</template>
@@ -107,14 +107,14 @@
                             <!-- <el-menu-item index="3-1"><a href="html/help.html">技术指导</a></el-menu-item>
                             <el-menu-item index="3-2">售后服务</el-menu-item> -->
                         <!-- </el-submenu> -->
-                <!-- </div>
+                </div>
             </nav>
         </div>
     </div>
-</div>  -->
+</div>
 <!--顶部导航end-->
     <!--轮播图-->
-    <!-- <div class="" >
+    <div class="" >
         <template>
             <div class="block">
                 <el-carousel height="300px">
@@ -124,11 +124,11 @@
                 </el-carousel>
             </div>
         </template>
-    </div> -->
+    </div>
     <!--首页其他内容展示-->
 
     <div class="container" style="background:#fff;margin-top: 20px">
-        <div class="row">
+        <div class="row" style="">
             <div class="col-md-3" >
                 <template>
                 <el-col :span="23">
@@ -140,6 +140,7 @@
                     <el-menu
                             default-active="2"
                             class="el-menu-vertical-demo"
+                            <!-- @open="handleOpen" -->
                             @close="handleClose">
                         <el-submenu index="1">
                             <template slot="title">
@@ -235,7 +236,7 @@
         </div>
     </div>
 
-    <!-- <div class="container-fluid cl-footer">
+    <div class="container-fluid cl-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -263,7 +264,7 @@
             <p class="cl-copyright">copyright @ 2017~2018 XXXXX</p>
         </div>
     </div>
-</div> -->
+</div>
 <script src="../jquery/jquery.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../element/vue.js"></script>
