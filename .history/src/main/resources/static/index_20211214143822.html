@@ -99,10 +99,10 @@
             </div>
         </template>
     </div>
-    <div class="container-fluid visible-phone" style="overflow-x: hidden;padding: 0">
+    <div class="container-fluid szy-box visible-phone" style="overflow-x: hidden;padding: 0">
         <template>
             <div class="block">
-                <el-carousel class="" height="150px">
+                <el-carousel class="szy-box" height:150px>
                     <el-carousel-item v-for="item in imageList" :key="item">
                         <img :src="item" style="width: 100%;">
                     </el-carousel-item>
@@ -177,18 +177,18 @@
                 this.currentScroll = window.pageYOffset;
                 this.number = this.currentScroll
 
-                // if(this.currentScroll >= this.$refs.part1.offsetTop ){
-                //     this.part1flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part2.offsetTop + 1200){
-                //     this.part2flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part3.offsetTop + 1600){
-                //     this.part3flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part4.offsetTop + 2000){
-                //     this.part4flag = true
-                // }
+                if(this.currentScroll >= this.$refs.part1.offsetTop ){
+                    this.part1flag = true
+                }
+                if(this.currentScroll >= this.$refs.part2.offsetTop + 1200){
+                    this.part2flag = true
+                }
+                if(this.currentScroll >= this.$refs.part3.offsetTop + 1600){
+                    this.part3flag = true
+                }
+                if(this.currentScroll >= this.$refs.part4.offsetTop + 2000){
+                    this.part4flag = true
+                }
             },
             toIndex:function () {
                 this.mainUrl = 'html/main.html'

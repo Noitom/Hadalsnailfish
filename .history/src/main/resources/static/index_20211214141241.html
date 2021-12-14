@@ -76,7 +76,7 @@
                     <el-menu class="el-menu-demo" :xs="1" mode="horizontal" text-color="#2b2b2b" default-active="1" active-text-color="rgb(91, 146, 251)">
                         <el-menu-item index="1"> <a href="#" @click="toIndex">首页</a> </el-menu-item>
                         <!-- <el-submenu index="2"> -->
-                        <el-menu-item index="2" > <a href="#" @click="toProduct">所有产品</a> </el-menu-item>
+                        <el-menu-item index="2" > <a href="#" @click="product">所有产品</a> </el-menu-item>
                         <el-menu-item index="3" > <a href="#" @click="toHelp">技术支持</a> </el-menu-item>
                         <el-menu-item index="4" > <a href="#">合作伙伴</a> </el-menu-item>
                         <el-menu-item index="5"><a href="#" @click="toConnect">联系我们</a></el-menu-item>
@@ -99,10 +99,10 @@
             </div>
         </template>
     </div>
-    <div class="container-fluid visible-phone" style="overflow-x: hidden;padding: 0">
+    <div class="container-fluid szy-box visible-phone" style="overflow-x: hidden;padding: 0">
         <template>
             <div class="block">
-                <el-carousel class="" height="150px">
+                <el-carousel class="szy-box" height:150px>
                     <el-carousel-item v-for="item in imageList" :key="item">
                         <img :src="item" style="width: 100%;">
                     </el-carousel-item>
@@ -177,18 +177,18 @@
                 this.currentScroll = window.pageYOffset;
                 this.number = this.currentScroll
 
-                // if(this.currentScroll >= this.$refs.part1.offsetTop ){
-                //     this.part1flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part2.offsetTop + 1200){
-                //     this.part2flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part3.offsetTop + 1600){
-                //     this.part3flag = true
-                // }
-                // if(this.currentScroll >= this.$refs.part4.offsetTop + 2000){
-                //     this.part4flag = true
-                // }
+                if(this.currentScroll >= this.$refs.part1.offsetTop ){
+                    this.part1flag = true
+                }
+                if(this.currentScroll >= this.$refs.part2.offsetTop + 1200){
+                    this.part2flag = true
+                }
+                if(this.currentScroll >= this.$refs.part3.offsetTop + 1600){
+                    this.part3flag = true
+                }
+                if(this.currentScroll >= this.$refs.part4.offsetTop + 2000){
+                    this.part4flag = true
+                }
             },
             toIndex:function () {
                 this.mainUrl = 'html/main.html'
@@ -198,9 +198,6 @@
             },
             toHelp:function () {
                 this.mainUrl = 'html/help.html'
-            },
-            toProduct:function(){
-                this.mainUrl = 'html/product.html'
             }
         },
         mounted:function () {
