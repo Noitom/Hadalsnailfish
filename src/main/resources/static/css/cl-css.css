@@ -63,8 +63,6 @@ a:hover{
 
 /*footer*/
 .cl-footer{
-    width: 1300px;
-    margin: 0 auto;
     background-color: #2d3e50;
     text-align: center;
     padding:2rem 0 1rem 0;
@@ -264,7 +262,7 @@ a:hover{
     top: 70%;
     transform: translate(-50%)
     translatey(-50%);
-} */ */
+} */
 /* 产品介绍界面*/
 .jumbotron-i{
     height: 670px;
