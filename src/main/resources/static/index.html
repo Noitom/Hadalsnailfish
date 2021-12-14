@@ -56,7 +56,7 @@
 
         .szy-box{
             height: 0;
-            min-height: 370px;
+            min-height: 310px;
         }
     </style>
 </head>
@@ -74,12 +74,12 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <el-menu class="el-menu-demo" :xs="1" mode="horizontal" text-color="#2b2b2b" default-active="1" active-text-color="rgb(91, 146, 251)">
-                        <el-menu-item index="1"> <a href="index.html">首页</a> </el-menu-item>
+                        <el-menu-item index="1"> <a href="#" @click="toIndex">首页</a> </el-menu-item>
                         <!-- <el-submenu index="2"> -->
                         <el-menu-item index="2" > <a href="html/product.html">所有产品</a> </el-menu-item>
-                        <el-menu-item index="3" > <a href="html/help.html">技术支持</a> </el-menu-item>
+                        <el-menu-item index="3" > <a href="#" @click="toHelp">技术支持</a> </el-menu-item>
                         <el-menu-item index="4" > <a href="#">合作伙伴</a> </el-menu-item>
-                        <el-menu-item index="5"><a href="html/connect.html">联系我们</a></el-menu-item>
+                        <el-menu-item index="5"><a href="#" @click="toConnect">联系我们</a></el-menu-item>
                     </el-menu>
                             <!-- <el-menu-item index="2-1"> <a href="html/product.html">所有产品</a> </el-menu-item> -->
                             <!-- <el-submenu index="2-2">
@@ -145,253 +145,13 @@
             </div>
         </template>
     </div>
-    <!--首页其他内容展示-->
 
-    <!--<div class="jumbotron-one">-->
-        <!--<transition enter-active-class="animated bounceInRight">-->
-            <!--<div class="container-tow" style="background: url(img/border.webp);" ref="part1" v-show="part1flag">-->
-                <!--<span class="word">关于我们:</span>-->
-                <!--<div class="word-1">-->
-                    <!--<span>{{message}}</span></div>-->
-                <!--<div class="image-1" style="background: url(img/img-1.webp) no-repeat;"></div>-->
-                <!--<div class="image-2" style="background: url(img/img-2.webp);"></div>-->
-                <!--<div class="but-1">-->
-                    <!--<a href="#">-->
-                        <!--<span>xxxx</span>-->
-                    <!--</a>-->
-                <!--</div>-->
-                <!--<div class="but-2">-->
-                    <!--<span> > </span>-->
-                    <!--</a>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</transition>-->
-    <!--</div>-->
+    <div class="container-fluid" style="padding: 0;height: 100%">
+        <iframe id="mainIframe" width="100%" height="100%" frameborder="0" v-bind:src="mainUrl" onload="this.height=this.contentWindow.document.body.scrollHeight"></iframe>
+    </div>
 
 
-    <!--&lt;!&ndash; <div class="jumbotron">-->
-        <!--<div class="container">-->
-            <!--展示内容预留位置-->
-        <!--</div> &ndash;&gt;-->
 
-    <!--&lt;!&ndash; </div> &ndash;&gt;-->
-
-    <!--&lt;!&ndash;首页其他内容展示&ndash;&gt;-->
-    <!--<div class="container-fluid" style="background: url('img/AD0Iz_PkBhACGAAgvZLxygUo8LKV8AYwgA844QU.jpg') repeat-y center;height: 737px;width: 100%" >-->
-        <!--<div class="container">-->
-            <!--<div style="width: 1200px;">-->
-                <!--<transition enter-active-class="animated bounceInRight">-->
-                <!--<div class="row" ref="part2" v-show="part2flag">-->
-                    <!--<div class="col-md-4" style="height: 735px;background: url('img/AD0Iz_PkBhAEGAAgu5LxygUomNWtNzDgAjjWAw.png.webp') no-repeat center;" >-->
-                        <!--<div class="d-flex flex-column justify-content-around align-items-center" style="height: 735px;padding-bottom: 150px;padding-top: 150px">-->
-                            <!--<div class="p-2"  >-->
-                                <!--<p style="color: rgb(255, 255, 255); font-family: 微软雅黑; font-size: 54px; background-color: transparent;"  >我们的优势</p>-->
-                                <!--<p style="font-family: 微软雅黑; color: rgb(255, 255, 255); font-size: 22px;">15年经验铸就坚硬的品牌理念</p>-->
-                            <!--</div>-->
-                            <!--<div class="p-2">-->
-                                <!--<div style="position: relative;right: 50px">-->
-                                    <!--<p style="color: rgb(255, 255, 255);  font-size: 18px; background-color: transparent;">FINAL QUALITY OF INTERNATIONAL</p>-->
-                                    <!--<p style="color: rgb(255, 255, 255); font-family: 微软雅黑; font-size: 18px; background-color: transparent;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADVANCED TECHNOLOGY</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="col-md-7" style="height: 735px;">-->
-                        <!--<div class="d-flex flex-column justify-content-around align-items-center" style="height: 735px;padding-bottom: 100px;padding-top: 100px;padding-left: 100px">-->
-                            <!--<div class="d-flex flex-row " style=" height: 100px;width: 100%">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAgupLxygUotcqk4QMwVThV.png.webp" style="height: 85px;width: 85px">-->
-                                <!--<div class="d-flex flex-column" style="padding-left: 50px">-->
-                                    <!--<p class="szy-yahei-22px-blue">国际认证品牌</p>-->
-                                    <!--<p class="szy-yahei-18px-white">CERUFICATION</p>-->
-                                    <!--<p class="szy-yahei-16px-white">一系列突破性的创新给了我们公司的产品当之无愧的全球声誉</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-row " style=" height: 100px;width: 100%">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAguJLxygUoqpuiGzBVOFU.png.webp" style="height: 85px;width: 85px">-->
-                                <!--<div class="d-flex flex-column" style="padding-left: 50px">-->
-                                    <!--<p class="szy-yahei-22px-blue">国际认证品牌</p>-->
-                                    <!--<p class="szy-yahei-18px-white">CERUFICATION</p>-->
-                                    <!--<p class="szy-yahei-16px-white">一系列突破性的创新给了我们公司的产品当之无愧的全球声誉</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-row " style=" height: 100px;width: 100%">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAgu5LxygUozp2n1AIwVThV.png.webp" style="height: 85px;width: 85px">-->
-                                <!--<div class="d-flex flex-column" style="padding-left: 50px">-->
-                                    <!--<p class="szy-yahei-22px-blue">国际认证品牌</p>-->
-                                    <!--<p class="szy-yahei-18px-white">CERUFICATION</p>-->
-                                    <!--<p class="szy-yahei-16px-white">一系列突破性的创新给了我们公司的产品当之无愧的全球声誉</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--</transition>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="jumbotron-i">-->
-        <!--<transition enter-active-class="animated bounceInRight">-->
-            <!--<div class="container" ref="part3" v-show="part3flag">-->
-
-                <!--<div class="d-flex flex-column justify-content-around" style="height: 670px;" >-->
-                    <!--<div class="d-flex flex-column justify-content-around" style="height: 200px;width: 100%">-->
-                        <!--<div>-->
-                            <!--<h2>产品介绍</h2>-->
-                            <!--<h5>PRODUCT INTRODUCTION</h5>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="d-flex flex-row justify-content-around" style="height: 470px;width: 100%">-->
-                        <!--<div style="height: 360px;width: 250px;">-->
-                            <!--<img src="img/chanping1.webp" class="szy-index-img">-->
-                            <!--<p style="font-size: 30px; text-align:center">xxx</p>-->
-                        <!--</div>-->
-                        <!--<div style="height: 360px;width: 250px;">-->
-                            <!--<img src="img/chanping1.webp" class="szy-index-img">-->
-                            <!--<p style="font-size: 30px; text-align:center">xxx</p>-->
-                        <!--</div>-->
-                        <!--<div style="height: 360px;width: 250px;">-->
-                            <!--<img src="img/chanping1.webp" class="szy-index-img">-->
-                            <!--<p style="font-size: 30px; text-align:center">xxx</p>-->
-                        <!--</div>-->
-                        <!--<div style="height: 360px;width: 250px;">-->
-                            <!--<img src="img/chanping1.webp" class="szy-index-img">-->
-                            <!--<p style="font-size: 30px; text-align:center">xxx</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</transition>-->
-    <!--</div>-->
-
-    <!--<div class="container-fluid" style="background: url('img/AD0Iz_PkBhACGAAgvZLxygUo3KbZmwUwgA842gQ.jpg') repeat-y center;height: 600px;width: 100%">-->
-        <!--<transition enter-active-class="animated bounceInRight">-->
-            <!--<div class="container" ref="part4" v-show="part4flag">-->
-                <!--<div class="d-flex flex-column justify-content-around " style="width: 1200px;height: 600px;padding-bottom: 100px;padding-top: 100px">-->
-                    <!--<div>-->
-                        <!--<p style="font-family: 微软雅黑; font-size: 30px; color: rgb(255, 255, 255);margin-bottom: 0">制造工艺流程</p>-->
-                        <!--<p style="font-family: 微软雅黑; font-size: 15px; color: rgb(0, 0, 0);">MANUFACTURING PROCESS</p>-->
-                    <!--</div>-->
-                    <!--<div class="d-flex flex-column justify-content-around " style="width: 100%;height: 300px;">-->
-                        <!--<div style="position: relative;left: 75px;margin-bottom: 10px;padding-top: 25px">-->
-                            <!--<img src="img/AD0Iz_PkBhAEGAAg0P3xygUomLSmbjCgCDgU.png.webp">-->
-                        <!--</div>-->
-                        <!--<div class="d-flex justify-content-between ">-->
-                            <!--<div class="d-flex flex-column align-items-center">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAg6-3xygUooLKNxwcwmAE4mAE.png.webp">-->
-                                <!--<p style="font-family: 微软雅黑; font-size: 16px; color: rgb(255, 255, 255);margin-top: 20px">确认需求</p>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-column align-items-center">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAg6-3xygUooLKNxwcwmAE4mAE.png.webp">-->
-                                <!--<p style="font-family: 微软雅黑; font-size: 16px; color: rgb(255, 255, 255);margin-top: 20px">确认需求</p>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-column align-items-center">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAg6-3xygUooLKNxwcwmAE4mAE.png.webp">-->
-                                <!--<p style="font-family: 微软雅黑; font-size: 16px; color: rgb(255, 255, 255);margin-top: 20px">确认需求</p>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-column align-items-center">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAg6-3xygUooLKNxwcwmAE4mAE.png.webp">-->
-                                <!--<p style="font-family: 微软雅黑; font-size: 16px; color: rgb(255, 255, 255);margin-top: 20px">确认需求</p>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-column align-items-center">-->
-                                <!--<img src="img/AD0Iz_PkBhAEGAAg6-3xygUooLKNxwcwmAE4mAE.png.webp">-->
-                                <!--<p style="font-family: 微软雅黑; font-size: 16px; color: rgb(255, 255, 255);margin-top: 20px">确认需求</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</transition>-->
-    <!--</div>-->
-
-
-    <!--<div class="container">-->
-        <!--<div class="d-flex flex-column">-->
-            <!--<div style="height: 100px;margin-top:30px;">-->
-                <!--<p style="font-size: 30px;color: #3381ff;margin-bottom: 0;margin-top:20px;;font-weight:bold">服务案例</p>-->
-                <!--<p style="font-size: 30px">SERVICE CASE</p>-->
-            <!--</div>-->
-            <!--<div style="height: 500px">-->
-                <!--<div class="d-flex flex-row justify-content-around" style="height: 500px">-->
-                    <!--<div style="width: 470px">-->
-                        <!--<div class="d-flex flex-column justify-content-around" style="height: 500px;">-->
-                            <!--<div class="d-flex flex-row" style="height: 109px;">-->
-                                <!--<div class="p-2"-->
-                                     <!--style="margin-left: 20px;background-color:hsl(0, 9%, 89%) ;height: 85px;width: 85px;">-->
-                                    <!--<p style="font-size: 20px;margin-left: 20px;">25</p>-->
-                                    <!--<p>2017/10</p>-->
-                                <!--</div>-->
-                                <!--<div class="p-2" style="width: 300px;margin-left: 20px;">-->
-                                    <!--<a href="#" style="display: block;">五金如何保养？</a>-->
-                                    <!--<span style="height: 80px;width: 300px;font-size: 12px;">xxxxxxxxxxxxxxxxxxxxxxxx</span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-row" style="height: 109px;">-->
-                                <!--<div class="p-2"-->
-                                     <!--style="margin-left: 20px;background-color:hsl(0, 9%, 89%) ;height: 85px;width: 85px;">-->
-                                    <!--<p style="font-size: 20px;margin-left: 20px;">25</p>-->
-                                    <!--<p>2017/10</p>-->
-                                <!--</div>-->
-                                <!--<div class="p-2" style="width: 300px;margin-left: 20px;">-->
-                                    <!--<a href="#" style="display: block;">五金如何保养？</a>-->
-                                    <!--<span style="height: 80px;width: 300px;font-size: 12px;">xxxxxxxxxxxxxxxxxxxxxxxx</span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="d-flex flex-row" style="height: 109px;">-->
-                                <!--<div class="p-2"-->
-                                     <!--style="margin-left: 20px;background-color:hsl(0, 9%, 89%);height: 85px;width: 85px;">-->
-                                    <!--<p style="font-size: 20px;margin-left: 20px;">25</p>-->
-                                    <!--<p>2017/10</p>-->
-                                <!--</div>-->
-                                <!--<div class="p-2" style="width: 300px;margin-left: 20px;">-->
-                                    <!--<a href="#" style="display: block;">五金如何保养？</a>-->
-                                    <!--<span style="height: 80px;width: 300px;font-size: 12px;">xxxxxxxxxxxxxxxxxxxxxxxx</span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; 图片区域 &ndash;&gt;-->
-                    <!--<div class="d-flex flex-row" style="width: 800px">-->
-                        <!--<div class="d-flex flex-column">-->
-                            <!--<div class="p-2 " style="height: 250px;">-->
-                                <!--<div class="d-flex flex-row">-->
-                                    <!--<div class="p-2"-->
-                                         <!--style="height: 215px;width: 335px;background: url(img/AD0IhdDxBBACGAAg07CfvgUorZv0twUwzQI40wE.jpg.webp) no-repeat;">-->
-
-                                    <!--</div>-->
-                                    <!--<div class="p-2 "-->
-                                         <!--style="margin-left:20px;height: 215px;width: 335px;background: url(img/AD0IhdDxBBACGAAg0bCfvgUovfrw1AQwzQI40wE.jpg.webp) no-repeat;">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="p-2" style="height: 250px;">-->
-                                <!--<div class="d-flex flex-column">-->
-                                    <!--<div class="p-2 " style="height: 250px;">-->
-                                        <!--<div class="d-flex flex-row">-->
-                                            <!--<div class="p-2"-->
-                                                 <!--style="margin-left:-5px;height: 215px;width: 335px;background: url(img/AD0IhdDxBBACGAAgv7CfvgUowNfZzAYwzQI40wE.jpg.webp) no-repeat;">-->
-                                                <!---->
-                                            <!--</div>-->
-                                            <!--<div class="p-2"-->
-                                                 <!--style="margin-left:20px;height: 215px;width: 335px;background: url(img/AD0IhdDxBBACGAAgx7CfvgUo16PphwcwzQI40wE.jpg.webp) no-repeat;">-->
-                                                <!---->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-    <!-- <div class="" style="height: 100%;width: 100%"> -->
-        <!--<iframe src="html/product.html" style="width: 100%;height: 100%" frameborder="0" height="100%"></iframe>-->
-    <!--</div>-->
     <div class="container-fluid cl-footer">
         <div class="container szy-end-padding">
             <div class="row">
@@ -443,7 +203,8 @@
             part2flag:false,
             part3flag:false,
             part4flag:false,
-            number:0
+            number:0,
+            mainUrl:'html/main.html'
 
         },
         methods: {
@@ -463,6 +224,15 @@
                 if(this.currentScroll >= this.$refs.part4.offsetTop + 2000){
                     this.part4flag = true
                 }
+            },
+            toIndex:function () {
+                this.mainUrl = 'html/main.html'
+            },
+            toConnect:function () {
+                this.mainUrl = 'html/connect.html'
+            },
+            toHelp:function () {
+                this.mainUrl = 'html/help.html'
             }
         },
         mounted:function () {
@@ -472,6 +242,8 @@
             window.removeEventListener("scroll",this.handleScroll)
         },
     });
+
+
 
 </script>
 </body>
